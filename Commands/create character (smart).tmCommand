@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/perl -w
+$m1=$m2='';
+$c=1;
+while(&lt;&gt;)
+{
+	if(/^\t{4}(\S.*)[\r\n]*$/)
+	{
+		$m1=$m2;
+		$m2=$1;
+	}
+	$c++;
+	last if($c==$ENV{'TM_LINE_NUMBER'});
+}
+print "\t\t\t\t$m1";</string>
+	<key>disableOutputAutoIndent</key>
+	<true/>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>create character (smart)</string>
+	<key>output</key>
+	<string>afterSelectedText</string>
+	<key>scope</key>
+	<string>text.screenplay </string>
+	<key>uuid</key>
+	<string>E2A7C9E1-7275-4DDD-997C-DDCC86AD9A17</string>
+</dict>
+</plist>

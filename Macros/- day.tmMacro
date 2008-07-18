@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<string> </string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>-</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string> </string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>d</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>a</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>y</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>command</key>
+						<string>moveToBeginningOfLineAndModifySelection:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>uppercaseWord:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>moveToEndOfLine:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewlineIgnoringFieldEditor:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewlineIgnoringFieldEditor:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>~4</string>
+	<key>name</key>
+	<string>- day</string>
+	<key>scope</key>
+	<string>text.screenplay keyword.slugline location eol</string>
+	<key>uuid</key>
+	<string>A22804D3-57CD-4583-9455-F60060BD1019</string>
+</dict>
+</plist>

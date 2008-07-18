@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+require "#{ENV['TM_SUPPORT_PATH']}/lib/codecompletion"
+
+choices = []
+
+TextmateCompletionsParser::PARSERS[:screenplay_location] = {
+  :select =&gt; /^(?i:int\.\s|ext\.\s|i\/e\.\s)?(.*)\s-\s[^a-z\n]+\s*$/,
+  :sort =&gt; true
+}
+
+parsed_choices = TextmateCompletionsParser.new(nil, :scope =&gt; :screenplay_location).to_ary
+choices += parsed_choices if parsed_choices
+
+choices.each { |c| c.downcase! }
+
+choices += ['--']
+
+print TextmateCodeCompletion.new(choices,'', :scope =&gt; :screenplay_location).to_snippet.upcase</string>
+	<key>fallbackInput</key>
+	<string>line</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~</string>
+	<key>name</key>
+	<string>Location Auto-Complete copy</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>text.screenplay location eol</string>
+	<key>uuid</key>
+	<string>BA0B416B-D1AC-41D2-9623-64EF3913BD0A</string>
+</dict>
+</plist>

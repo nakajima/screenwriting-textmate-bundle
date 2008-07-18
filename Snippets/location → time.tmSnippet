@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string> - $1</string>
+	<key>keyEquivalent</key>
+	<string>	</string>
+	<key>name</key>
+	<string>location → time</string>
+	<key>scope</key>
+	<string>text.screenplay keyword.slugline location eol</string>
+	<key>uuid</key>
+	<string>E9D9F46E-6D44-4B49-BC3A-2176D98AFDB4</string>
+</dict>
+</plist>

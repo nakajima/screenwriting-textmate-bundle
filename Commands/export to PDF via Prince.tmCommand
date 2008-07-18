@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># first figure out a name for the result
+NAME="${TM_FILENAME:-untitled}"
+BASENAME="${NAME%.*}"
+DST="/tmp/$BASENAME"
+
+# everything we output within { … } is written to the HTML file via redirection (see line with the })
+{
+# first output HTML header
+cat &lt;&lt;HEAD
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+	&lt;title&gt;$BASENAME&lt;/title&gt;
+	&lt;style type="text/css" media="all"&gt;
+
+	/* ---------- PRINTED STYLES ---------- */
+	
+		/* all page margins are maximum */
+		@page {
+			size: 8.5in 11in;
+			margin-top:${SPLAY_PAGE_TOP:-1in};
+			margin-right:${SPLAY_PAGE_RIGHT:-1in};
+			margin-bottom:${SPLAY_PAGE_BOTTOM:-.5in};
+			margin-left:${SPLAY_PAGE_LEFT:-1.5in};
+		}
+		/* This makes the page-counter start on the first page of the screenplay (vs. the prince demo-page) */
+		div#screenplay {
+			counter-reset: page 1;
+			page: screenplay;
+		}
+		@page screenplay {
+			/* Page Numbers */
+			@top-right-corner {
+				font: 12pt 'courier';
+				content: counter(page)'.';
+				vertical-align: bottom;
+				padding-bottom: 1em;
+			}
+			/* Define Header */
+			@top-left { 
+				content: '$SPLAY_HEADER';
+				font: italic 10pt Georgia;
+				color: #888;
+				vertical-align: bottom;
+				padding-bottom: 1.3em;
+			}
+			/* Define Footer */
+			@bottom-left { 
+				content: '$SPLAY_FOOTER';
+				font: italic 10pt Georgia;
+				color: #888;
+				vertical-align:top;
+				padding-top:0;
+			}
+		}
+		/* removes the header and page-numbers from the first page */
+		@page screenplay:first {
+			@top-right-corner { content: normal; }
+			@top-left { content: normal; }
+		}
+		p {
+			orphans: 2;
+			widows: 2;
+		}
+		dl {
+			page-break-inside:avoid;
+		}
+		dt, h2 {
+			page-break-after: avoid;
+		}
+		dd.parenthetical {
+			orphans: 3;
+			widows: 3;
+			page-break-before: avoid;
+			page-break-after: avoid;
+		}
+		h3, h4, h5, h6 {
+			prince-bookmark-level: none;
+		}
+		div.page-break {
+			page-break-after:always;
+		}
+		
+		
+
+		/* ---------- COMMON LAYOUT ---------- */
+		
+		
+		
+		body {
+			font-family: 'Courier';
+			font-size: 12pt;
+			line-height: ${SPLAY_LINEHEIGHT:-12.4pt};
+		}
+		#screenplay {
+			width: 6in;
+			margin:0 auto;
+		}
+		p.center {
+			text-align:center;
+			margin-left:0;
+			width:100%;
+		}
+		p {
+			margin-top:12pt;
+			margin-bottom:12pt;
+			margin-left:${SPLAY_ACT_INDENT:-0};
+			width:${SPLAY_ACT_WIDTH:-auto};
+		}
+		/* characters */
+		dt {
+			font-weight:normal;
+			margin-top:1em;
+			margin-left:${SPLAY_CHAR_INDENT:-2in};
+			width:${SPLAY_CHAR_WIDTH:-4in};
+		}
+		dd.parenthetical {
+			margin-left:${SPLAY_PAR_INDENT:-1.6in};
+			text-indent:-.1in;
+			width: ${SPLAY_PAR_WIDTH:-2in};
+		}
+		dd {
+			margin:0;
+			margin-left: ${SPLAY_DIAL_INDENT:-1in};
+			width: ${SPLAY_DIAL_WIDTH:-3.5in};
+			line-height: ${SPLAY_DIAL_LINEHEIGHT:-inherit};
+		}
+		h1,h2,h3,h4,h5,h6 {
+			font-weight: normal;
+			font-size: 12pt;
+			margin-top: 1em;
+			text-transform:uppercase;
+		}
+		h2 {
+			width: ${SPLAY_SLUG_WIDTH:-inherit};
+			margin-top: ${SPLAY_SLUG_TOP_MARGIN:-24pt};
+			margin-bottom: ${SPLAY_SLUG_BOTTOM_MARGIN:-12pt};
+			margin-left: ${SPLAY_SLUG_INDENT:-0};
+			font-weight: ${SPLAY_SLUG_BOLD:-normal};
+			text-decoration:${SPLAY_SLUG_ULINE:-none};
+		}
+		h3 {
+			margin-left: ${SPLAY_TRANS_INDENT:-4in};
+			width: ${SPLAY_TRANS_WIDTH:-2in};
+			margin-top: ${SPLAY_TRANS_TOP_MARGIN:-12pt};
+			margin-bottom: ${SPLAY_TRANS_BOTTOM_MARGIN:-12pt};
+		}
+		h4 {
+			margin-top: ${SPLAY_TRANS_TOP_MARGIN:-12pt};
+			margin-bottom: ${SPLAY_TRANS_BOTTOM_MARGIN:-12pt};
+		}
+		span.underline {
+			text-decoration:underline;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id="screenplay"&gt;
+HEAD
+# then HTML body (converted from document)
+perl -0777 -pe '
+
+# escape ampersands
+s/&amp;/&amp;amp;/g;
+
+# Comments
+s/\/\*/&lt;!--/g;
+s/\*\//--&gt;/g;
+
+# Bold
+s/\*(\S[^\*\n]+\S)\*/&lt;b&gt;$1&lt;\/b&gt;/g;
+
+# Underline
+s/\_(\S[^\_\n]+\S)\_/&lt;u&gt;$1&lt;\/u&gt;/g;
+
+# Page Breaks
+s/={50}/&lt;div class="page-break"&gt;&lt;\/div&gt;/mg;
+
+# Left-transitions
+s/^(\w+(?:\s\w+)?\s(?i:to|up|in|out|black)(?i:\son)?([\.\:][ ]*)?$)/&lt;h4&gt;$1&lt;\/h4&gt;/mg;
+
+# well-formed sluglines
+s/^(EXT|INT|I\/E|int|ext|i\/e)\.?\s.*/&lt;h2&gt;$&amp;&lt;\/h2&gt;/mg;
+
+# Arbitary Sluglines
+s/^[^a-z\t\&lt;\&gt;\n]+$/&lt;h2&gt;$&amp;&lt;\/h2&gt;/mg;
+
+# Right Transitions
+s/^(\t{10})([^\t].*)$/&lt;h3&gt;$2&lt;\/h3&gt;/mg;
+
+# Centered Text
+s/^(\t{5})([^\t\n].*)$/&lt;p class="center"&gt;$2&lt;\/p&gt;/mg;
+
+# Centered Text Line Breaks
+s/&lt;\/p&gt;(\n\t{5})&lt;p class="center"&gt;(.*)/&lt;br&gt;$1$2/mg;
+
+# Characters
+s/^\t{4}([^\t\n][^\n]*)$/&lt;dl&gt;&lt;dt class="character"&gt;$1&lt;\/dt&gt;/mg;
+
+# Parenthetical
+s/(^\t{3})(\(.*\))[ \t]*$/&lt;dd class="parenthetical"&gt;$2&lt;\/dd&gt;/mg;
+
+# Dialogue
+s/^(\t{2})([^\t\n][^\n]*)$/&lt;dd&gt;$2&lt;\/dd&gt;&lt;\/dl&gt;/mg;
+
+# Clean Dialogue followed by Parenthetical
+s/(&lt;\/dd&gt;)&lt;\/dl&gt;(\n&lt;dd)/$1$2/mg;
+
+# Clean up Dialogue that ends in a parenthetical
+s/&lt;\/dd&gt;[ \t]*\n([^&lt;][^d])/&lt;\/dd&gt;&lt;\/dl&gt;\n$1/mg;
+
+# Action Paragraphs
+s/^([^\n\t\&lt; ].*)\n/&lt;p&gt;$1&lt;\/p&gt;\n/mg;
+
+# Line-Breaks
+s/&lt;\/p&gt;\n&lt;p&gt;/&lt;br&gt;\n/mg;
+
+# Empty Line Breaks
+s/^[ ]{3}/&lt;br&gt;/mg;
+
+'
+
+# and finally HTML footer
+cat &lt;&lt;'TAIL'
+
+&lt;/div&gt;&lt;!--end screenplay --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+TAIL
+} &gt;"$DST.html"
+
+# process the file via prince
+/Applications/Utilities/prince/lib/prince/bin/prince "$DST.html" ~/Desktop/"$BASENAME".pdf
+
+# Display a message
+cat &lt;&lt;DONE
+&lt;div style="width:35em;margin:0 auto;"&gt;&lt;h1 style="font:normal 2em futura;color:#d4152d"&gt;DONE&lt;/h1&gt;&lt;p style="font:87%'Lucida Grande';color:#333"&gt;If there is no error message above this, the file should be on your &lt;b&gt;desktop&lt;/b&gt;.&lt;/p&gt;&lt;/div&gt;
+DONE</string>
+	<key>fallbackInput</key>
+	<string>document</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^H</string>
+	<key>name</key>
+	<string>export to PDF via Prince</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>uuid</key>
+	<string>F5804DED-A3D0-485A-93AC-5DDAD75C182A</string>
+</dict>
+</plist>

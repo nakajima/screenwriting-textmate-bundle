@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToBeginningOfLineAndModifySelection:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>deleteBackward:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Blank Transition → Action copy</string>
+	<key>scope</key>
+	<string>text.screenplay meta.blank.transition</string>
+	<key>uuid</key>
+	<string>77C17234-DF98-47C2-9729-235C9A42A872</string>
+</dict>
+</plist>

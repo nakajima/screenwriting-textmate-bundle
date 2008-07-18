@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>uppercaseWord:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>@k</string>
+	<key>name</key>
+	<string>Convert Word / Selection to ALL CAPS</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>useGlobalClipboard</key>
+	<false/>
+	<key>uuid</key>
+	<string>856522AB-86A3-4272-9F31-19AD377F4446</string>
+</dict>
+</plist>

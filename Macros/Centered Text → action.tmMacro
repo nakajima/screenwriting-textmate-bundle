@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>insertNewlineIgnoringFieldEditor:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>insertNewline:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Centered Text → action</string>
+	<key>scope</key>
+	<string>text.screenplay constant.centered</string>
+	<key>scopeType</key>
+	<string>local</string>
+	<key>uuid</key>
+	<string>A2FB41B7-3D04-4D09-8C88-1F29E084EE0F</string>
+</dict>
+</plist>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/perl
+local $/;             # put Perl in "slurp" mode
+$text = &lt;&gt;;           # read in the whole file
+$text =~ s/\n{3,}/\n\n/mg; #remove white-space
+$text =~ s/^\s{15}([^\s])/$1/mg; # Strip beginning spaces
+$text =~ s/^\s{35}([^\s])/\t\t\t\t$1/mg; # Characters
+$text =~ s/^\s{25}([^\s])/\t\t$1/mg; # Dialogue
+$text =~ s/^\s{29}([^\s])/\t\t\t$1/mg; # Parenthetical
+$text =~ s/^\s{59}([^s])/\n\t\t\t\t\t\t\t\t\t\t$1/mg; # Transitions
+$text =~ s/^\t\t([^\t\n]+)/##$1##/mg; # prep dialogue
+$text =~ s/##\n##/ /mg; #unwrap preped lines
+$text =~ s/^##/\t\t/mg; # indent preped dialogue
+$text =~ s/##[ ]*$//mg; # fix trailing preped dialoge.
+
+$text =~ s/(.)\n^([^\n\t])/$1 $2/mg; # Un-wrap Paragraphs
+
+print $text;</string>
+	<key>fallbackInput</key>
+	<string>document</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Import from Final Draft "Text with Layout"</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>uuid</key>
+	<string>624DBC9B-9D58-4CC7-A167-74ECA041F04D</string>
+</dict>
+</plist>

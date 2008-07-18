@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>osascript &amp;&gt;/dev/null \
+-e 'with timeout of 60 seconds' \
+-e 'tell application "Dictionary"' \
+-e 'activate' \
+-e 'end tell' \
+-e 'end timeout' \
+-e 'do shell script "open dict:///$TM_CURRENT_WORD"' &amp;</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@;</string>
+	<key>name</key>
+	<string>Lookup Word / Selection in Dictionary</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>uuid</key>
+	<string>E992AA3A-21BC-4E40-B6E4-F519DC773F23</string>
+</dict>
+</plist>

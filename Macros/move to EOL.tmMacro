@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToEndOfParagraph:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>	</string>
+	<key>name</key>
+	<string>move to EOL</string>
+	<key>scope</key>
+	<string>text.screenplay string.character, text.screenplay constant.transition</string>
+	<key>uuid</key>
+	<string>DEB9E4A7-8A00-47CF-86C3-8E4E3AA91BF9</string>
+</dict>
+</plist>

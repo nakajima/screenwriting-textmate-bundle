@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Time of Day</string>
+	<key>scope</key>
+	<string>text.screenplay keyword.slugline.full time</string>
+	<key>settings</key>
+	<dict>
+		<key>completions</key>
+		<array>
+			<string>day</string>
+			<string>dusk</string>
+			<string>dawn</string>
+			<string>night</string>
+			<string>noon</string>
+			<string>sunrise</string>
+			<string>sunset</string>
+			<string>twilight</string>
+			<string>magic hour</string>
+			<string>afternoon</string>
+			<string>morning</string>
+			<string>evening</string>
+			<string>later</string>
+			<string>moments later</string>
+			<string>continuous</string>
+			<string>the next day</string>
+			<string>intercut</string>
+		</array>
+		<key>disableDefaultCompletion</key>
+		<integer>1</integer>
+	</dict>
+	<key>uuid</key>
+	<string>C6D3B079-1E43-4662-BDCF-6D238D55396E</string>
+</dict>
+</plist>

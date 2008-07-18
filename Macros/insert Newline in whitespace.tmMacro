@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>insertNewline:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>insert Newline in whitespace</string>
+	<key>scope</key>
+	<string>text.screenplay string.character whitespace</string>
+	<key>uuid</key>
+	<string>C06F868A-D788-4A1B-8DE6-8DC08CD75D11</string>
+</dict>
+</plist>

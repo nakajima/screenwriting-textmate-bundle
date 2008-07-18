@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>echo "Aprox. $(( `wc -l` / 36 + 1 )) page(s)"</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^N</string>
+	<key>name</key>
+	<string>Page count for Document / Selection</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>uuid</key>
+	<string>24837ED7-7C6B-42F4-8B31-836707D90A86</string>
+</dict>
+</plist>

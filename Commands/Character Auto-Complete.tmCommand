@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+require "#{ENV['TM_SUPPORT_PATH']}/lib/codecompletion"
+
+choices = []
+
+TextmateCompletionsParser::PARSERS[:screenplay_characters] = {
+  # captures characters and parentheticals 
+  # :select =&gt; /^\t{4}([^\t].*?)\s*$/,
+  # Just characters
+  :select =&gt; /^\t{4}([^\t\n]+?)(?:\s*$|\s\(.*)/,
+  :sort =&gt; true
+}
+
+parsed_choices = TextmateCompletionsParser.new(nil, :scope =&gt; :screenplay_characters).to_ary
+choices += parsed_choices if parsed_choices
+
+choices.each { |c| c.downcase! }
+
+choices += ['--']
+
+print TextmateCodeCompletion.new(choices,'', :scope =&gt; :screenplay_characters).to_snippet.upcase</string>
+	<key>fallbackInput</key>
+	<string>line</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Character Auto-Complete</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>text.screenplay character eol</string>
+	<key>uuid</key>
+	<string>6DC91D56-D70A-4440-BDE3-FCD34D73E9F2</string>
+</dict>
+</plist>

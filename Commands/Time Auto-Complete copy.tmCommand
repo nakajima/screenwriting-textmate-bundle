@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+require "#{ENV['TM_SUPPORT_PATH']}/lib/codecompletion"
+preference = 'Time of Day'
+choices = []
+
+TextmateCompletionsParser::PARSERS[:screenplay_time] = {
+  :select =&gt; /^[^a-z\n\t]+\s-\s([^a-z\n].*)\s*$/,
+  :sort =&gt; true
+}
+
+parsed_choices = TextmateCompletionsParser.new(nil, :scope =&gt; :screenplay_time).to_ary
+choices += parsed_choices if parsed_choices
+
+choices.each { |c| c.downcase! }
+
+choices += ['--']
+
+plist_choices = TextmateCompletionsPlist.new( "#{ENV['TM_BUNDLE_PATH']}/Preferences/#{preference}.tmPreferences" ).to_ary
+choices += plist_choices if plist_choices
+
+print TextmateCodeCompletion.new(choices,'', :scope =&gt; :screenplay_time).to_snippet.upcase</string>
+	<key>fallbackInput</key>
+	<string>line</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>	</string>
+	<key>name</key>
+	<string>Time Auto-Complete copy</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>text.screenplay keyword.slugline.full time</string>
+	<key>uuid</key>
+	<string>95CCB270-5864-4F3F-B208-E8BB4C3BA5D5</string>
+</dict>
+</plist>

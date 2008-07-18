@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>cat &lt;&lt;HTML
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+	&lt;title&gt;Screenwriting Bundle Help&lt;/title&gt;
+	&lt;meta name="generator" content="TextMate http://macromates.com/"&gt;
+	&lt;meta name="author" content="Oliver Taylor"&gt;
+	&lt;!-- Date: 2006-12-30 --&gt;
+	&lt;style type="text/css" media="screen"&gt;
+		
+		html, body {
+			margin:0;
+			padding:0;
+		}
+		body {
+			font:87.5% "Lucida Grande";
+			line-height:1.4;
+			color:#333;
+		}
+		#wrapper {
+			margin:0 auto;
+			padding:0 2em 2em 2em;
+			max-width:35em;
+			
+		}
+		div.section {
+			margin:10em 0;
+			padding:1em 0;
+		}
+		div#table_of_contents {
+			margin-top:0;
+		}
+		div#version {
+			font:italic 1.1em Georgia;
+			color:#666;
+			text-align:center;
+		}
+		p.alert {
+			background:#fffdd5;
+			padding:.5em 1em;
+			border:1px solid #f2ccaa;
+		}
+		dl dd+dt {
+			margin-top:1em;
+		}
+		dl.alert {
+			margin:2em 0;
+			background:#fffdd5;
+			padding:.5em 1em;
+			border:1px solid #F2CCAA;
+		}
+		dl.alert dt {
+			font-weight:bold;
+			margin-bottom:.25em;
+		}
+		dl.alert dd {
+			margin:0 0 .5em 0;
+		}
+		ul {
+			padding-left:1.3em;
+		}
+		ul ul {
+			margin-top:.25em;
+		}
+		ul#nav&gt;li {
+			margin-top:.75em;
+		}
+		ul#keys li {
+			list-style:none;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family:"Gill Sans";
+			color:#444;
+		}
+		h1 {
+			text-align:center;
+			margin:.5em 0 1em 0;
+			color:#d4152d;
+			text-transform:uppercase;
+			letter-spacing:.2em;
+		}
+		h2 {
+			font-size:1.7em;
+			text-transform:uppercase;
+			letter-spacing:.05em;
+		}
+		h3 {
+			font-size:1.5em;
+			margin-top:1.5em;
+			padding-top:.5em;
+			border-bottom:1px solid #ccc;
+		}
+		h4 {
+			font-size:1.2em;
+		}
+		a {
+			color:#4F71A6;
+			text-decoration:none;
+			border-bottom:1px solid #aaa;
+		}
+		a:hover {
+			background:#D5E3FB;
+		}
+		em {
+			font-style:italic;
+			font-family: georgia;
+		}
+		abbr {
+			text-transform:uppercase;
+			letter-spacing:.1em;
+			font-size:.9em;
+		}
+		code {
+			font:.95em monaco;
+			background:#E6EAF1;
+			padding:0 .2em;
+		}
+		code.pre {
+			white-space: pre;
+		}
+		code.block {
+			display:block;
+			padding:1em 1.5em;
+			border:1px solid #D5DDEC;
+		}
+		li code.block {
+			padding:.5em .75em;
+		}
+		code span.comment {
+			color:#669AAF;
+		}
+		.grey {
+			color:#777;
+		}
+		
+		
+		table {
+			width:100%;
+			font-size:1em;
+		}
+		table th {
+			padding:1.5em 0 .25em 0;
+			text-align:left;
+			
+		}
+		table tr.th td {
+			color:#d70202;
+			border-bottom:1px solid #aaa;
+			font-weight:bold;
+		}
+		table td {
+			border-bottom:1px solid #ddd;
+		}
+		table td.var {
+			font:.9em monaco, monospace;
+		}
+		table td.unit {
+			text-align:right;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+		&lt;h1 id="screenwriting_bundle_help"&gt;Screenwriting Bundle Help&lt;/h1&gt;
+
+		&lt;div id="wrapper"&gt;
+
+		&lt;div id="version"&gt;
+			&lt;p&gt;This document refers to version 3.0 of the screenwriting Bundle.&lt;/p&gt;
+		&lt;/div&gt;
+
+		&lt;div id="table_of_contents" class="section"&gt;
+
+			&lt;h2&gt;Table of Contents&lt;/h2&gt;
+
+			&lt;ul id="nav"&gt;
+				&lt;li&gt;&lt;a href="#writing"&gt;Writing&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#help"&gt;Help&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#inline_help"&gt;Inline Help&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#tips"&gt;Tips&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#movement"&gt;Movement&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#auto_complete"&gt;Auto Complete&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#exporting_and_importing"&gt;Exporting &amp;amp; Importing&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#exporting"&gt;Exporting&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#importing"&gt;Importing from Final Draft&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#formatting"&gt;Formatting&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href="#plaintext_format"&gt;Document Format&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#custom_header_and_footer"&gt;Custom Header and Footer&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#customizing_the_screenplay_layout"&gt;Customizing the Screenplay Layout&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#final_draft_shortcuts"&gt;Final Draft Shortcuts&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#more_information"&gt;More Information&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+
+			&lt;dl class="alert"&gt;
+				&lt;dt&gt;Before you start&lt;/dt&gt;
+				&lt;dd&gt;By default, dialogue will not be in a narrow column, this is normal. Previewing or exporting corrects this.&lt;/dd&gt;
+				&lt;dd&gt;
+					&lt;ul id="keys"&gt;
+					&lt;li&gt;&amp;#x21A9; = return&lt;/li&gt;
+					&lt;li&gt;&amp;#x2305; = enter&lt;/li&gt;
+					&lt;li&gt;&amp;#x21E5; = tab&lt;/li&gt;
+					&lt;li&gt;&amp;#x238B; = escape&lt;/li&gt;
+					&lt;li&gt;&amp;#x2318; = command&lt;/li&gt;
+					&lt;li&gt;&amp;#x21E7; = shift&lt;/li&gt;
+					&lt;li&gt;&amp;#x2325; = option&lt;/li&gt;
+					&lt;li&gt;&amp;#x2303; = control&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/dd&gt;
+			&lt;/dl&gt;
+
+
+		&lt;/div&gt;&lt;!-- section --&gt;
+
+		&lt;div id="writing" class="section"&gt;
+			&lt;h2&gt;Writing&lt;/h2&gt;
+
+			&lt;p&gt;If you're familiar with any other screenwriting software you already know how to use this software. As you would expect, the &amp;#x21E5; and &amp;#x21A9; keys are how you move between elements and create new ones.&lt;/p&gt;
+
+			&lt;p&gt;For example:&lt;/p&gt;
+
+			&lt;ul&gt;
+				&lt;li&gt;Pressing &amp;#x21A9; at the end of an action line takes you to a new action paragraph.&lt;/li&gt;
+				&lt;li&gt;Pressing &amp;#x21E5; on an empty line creates a new character.&lt;/li&gt;
+				&lt;li&gt;Pressing &amp;#x21E5; at the end of a dialogue line creates a new character.&lt;/li&gt;
+			&lt;/ul&gt;
+
+			&lt;h3 id="help"&gt;Help&lt;/h3&gt;
+
+			&lt;p&gt;This documentation can be invoked from within the bundle at any time using the keyboard shortcut &amp;#x21E7;&amp;#x2303;H and is also availible online at &lt;code&gt;http://ollieman.net/screenbundle/help&lt;/code&gt;. You can also contact the developer directly on the website.&lt;/p&gt;
+
+			&lt;h3 id="inline_help"&gt;Inline Help&lt;/h3&gt;
+
+			&lt;p&gt;From anywhere in the document you can press &amp;#x2303;H and get a tooltip showing you what keys to press to move to different elements. For example: When typing in the location element press &amp;#x2303;H and a tooltip tells you that if you press &amp;#x2325;&amp;#x238B; it will Auto-Complete the element, if you press &amp;#x21E5; you'll jump to the Time element, and if you press &amp;#x21A9; you'll jump to the Action element.&lt;/p&gt;
+
+			&lt;h3 id="tips"&gt;Tips&lt;/h3&gt;
+
+			&lt;ul&gt;
+			&lt;li&gt;&lt;p&gt;Sluglines, Character Names, and Transitions will be capitalized when you press &amp;#x21A9; at the end of the line.&lt;/p&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;p&gt;To create a transition type it at the beginning of a line followed by a colon — or use the shortcut &amp;#x2325;&amp;#x21E5;.&lt;/p&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;p&gt;Page-breaks (in PDFs) can be inserted with the tab-trigger &lt;code&gt;break&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;p&gt;Successive blank lines will be collapsed when exporting. To override this, three spaces at the beginning of a line should be inserted.&lt;/p&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+
+			&lt;h3 id="movement"&gt;Movement&lt;/h3&gt;
+
+			&lt;p&gt;To move between elements, use the following shortcuts at the end of lines:&lt;/p&gt;
+
+			&lt;ul&gt;
+			&lt;li&gt;Empty line &amp;#8594; Character: &amp;#x21E5;&lt;/li&gt;
+			&lt;li&gt;Character &amp;#8594; Dialogue: &amp;#x21A9;&lt;/li&gt;
+			&lt;li&gt;Empty Dialogue &amp;#8594; Parenthetical: &amp;#x21E5;&lt;/li&gt;
+			&lt;li&gt;Parenthetical &amp;#8594; Dialogue: &amp;#x21A9;&lt;/li&gt;
+			&lt;li&gt;Dialogue &amp;#8594; Action: &amp;#x21A9;&lt;/li&gt;
+			&lt;li&gt;Dialogue &amp;#8594; Character: &amp;#x21E5;&lt;/li&gt;
+			&lt;li&gt;Dialogue &amp;#8594; Parenthetical: &amp;#x21E7;&amp;#x21A9;&lt;/li&gt;
+			&lt;li&gt;Empty Line &amp;#8594; Transition: &amp;#x2325;&amp;#x21E5;&lt;/li&gt;
+			&lt;/ul&gt;
+
+			&lt;h4 id="customizing_movement"&gt;Customizing Movement&lt;/h4&gt;
+
+			&lt;p&gt;To customize the movement between elements:&lt;/p&gt;
+
+			&lt;ol&gt;
+				&lt;li&gt;Open the Bundle Editor &amp;#x2303;&amp;#x2325;&amp;#x2318;B&lt;/li&gt;
+				&lt;li&gt;Open the Screenwriting Bundle&lt;/li&gt;
+				&lt;li&gt;Select the Movement you want to customize (i.e. &lt;code&gt;Dialogue =&gt; Character&lt;/code&gt;)&lt;/li&gt;
+				&lt;li&gt;Under &lt;code&gt;Activation: Key Equivalent&lt;/code&gt;, select the assigned shortcut and type the new one.&lt;/li&gt;
+			&lt;/ol&gt;
+
+			&lt;p class="alert"&gt;If more two movements &lt;em&gt;from the same place&lt;/em&gt; use the same key-stroke a window will ask you which one you want to use each time. To avoid this use different key-strokes for different movements from the same place.&lt;/p&gt;
+
+			&lt;h3 id="auto_complete"&gt;Auto-Complete&lt;/h3&gt;
+
+			&lt;p&gt;Auto-Complete is supported in the following elements: Locations, Times of Day, and Characters. To activate Auto-Complete press &amp;#x2325; &amp;#x238B; while typing.&lt;/p&gt;
+
+			&lt;p class="alert"&gt;Auto-Complete only works on saved documents at this time. So if you add a new character name without saving afterwards the name will not be auto-completed.&lt;/p&gt;
+
+			&lt;p&gt;It should be noted that when there is nothing in your document that matches what you are attempting to Auto-Complete, nothing will be inserted and no menu will be displayed. If you are sure you are attempting to complete something that is in your document already, try saving first.&lt;/p&gt;
+
+		&lt;/div&gt;&lt;!-- section --&gt;
+
+		&lt;div id="exporting_and_importing" class="section"&gt;
+
+		&lt;h2&gt;Exporting and Importing&lt;/h2&gt;
+
+		&lt;h3 id="exporting"&gt;Exporting&lt;/h3&gt;
+
+		&lt;p&gt;This bundle is capable of exporting in three ways: &lt;abbr&gt;HTML&lt;/abbr&gt;, &lt;abbr&gt;PDF&lt;/abbr&gt;, and directly to Final Draft 7.&lt;/p&gt;
+
+		&lt;p&gt;To export press &amp;#x21E7;&amp;#x2303;H and select the format you wish to export to. Remember that Prince&lt;abbr&gt;XML&lt;/abbr&gt; is required for &lt;abbr&gt;PDF&lt;/abbr&gt;.&lt;/p&gt;
+
+		&lt;h4 id="html"&gt;HTML&lt;/h4&gt;
+
+		&lt;p&gt;When exporting to &lt;abbr&gt;HTML&lt;/abbr&gt; a new document will be created within TextMate. You can then save this and do what you will with it.&lt;/p&gt;
+
+		&lt;h4 id="pdf"&gt;PDF&lt;/h4&gt;
+
+		&lt;p&gt;To install prince:&lt;/p&gt;
+
+		&lt;ol&gt;
+		&lt;li&gt;Download Prince at &lt;a href="http://www.princexml.com"&gt;www.princexml.com&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;Rename the downloaded folder to "prince"&lt;/li&gt;
+		&lt;li&gt;Move the downloaded folder to the &lt;code&gt;/Applications/Utilities/&lt;/code&gt; folder&lt;/li&gt;
+		&lt;/ol&gt;
+
+		&lt;p class="alert"&gt;If you want to install Prince to a different location you will have to alter the "export as screenplay to &lt;abbr&gt;PDF&lt;/abbr&gt;" bundle command.&lt;/p&gt;
+
+		&lt;h4 id="export_to_final_draft"&gt;Export to Final Draft&lt;/h4&gt;
+
+		&lt;p&gt;To export the screenplay to Final Draft press &amp;#x21E7;&amp;#x2303;H and select &lt;code&gt;open in Final Draft 7&lt;/code&gt;. Then, when Final Draft opens it will ask you if you are importing a text document or a script, choose "script".&lt;/p&gt;
+
+		&lt;p&gt;By default only Final Draft 7 is supported, however this can be changed. If you only have Final Draft 6:&lt;/p&gt;
+
+			&lt;ul&gt;
+				&lt;li&gt;open the bundle editor &amp;#x2303;&amp;#x2325;&amp;#x2318;B&lt;/li&gt;
+				&lt;li&gt;select the &lt;code&gt;open in Final Draft 7&lt;/code&gt; bundle item&lt;/li&gt;
+				&lt;li&gt;Find:
+					&lt;code class="block pre"&gt;# open the generated txt file in Final Draft 
+		open -a Final\ Draft\ 7 "$DST.txt"&lt;/code&gt;&lt;/li&gt;
+				&lt;li&gt;Replace the 7 with a 6&lt;/li&gt;
+			&lt;/ul&gt;
+
+		&lt;h3 id="importing"&gt;Importing&lt;/h3&gt;
+
+		&lt;p class="alert"&gt;At this time you may import from Final Draft only. Following these steps in Final Draft 6 or below is untested.&lt;/p&gt;
+
+		&lt;p&gt;Importing scripts requires you to first prep the document in Final Draft.&lt;/p&gt;
+
+		&lt;ol&gt;
+		&lt;li&gt;Go to &lt;code&gt;Format &amp;#x2192; Elements&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;Click on &lt;code&gt;Apply a Template&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;Select &lt;code&gt;Screenplay.fdt&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;Go to &lt;code&gt;File &amp;#x2192; Save As&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;Select the &lt;code&gt;Text Only with Layout Format&lt;/code&gt;&lt;/li&gt;
+		&lt;/ol&gt;
+
+		&lt;p&gt;After the document is saved in this manner...&lt;/p&gt;
+
+		&lt;ol&gt;
+		&lt;li&gt;Open the document in TextMate&lt;/li&gt;
+		&lt;li&gt;Run the Command &lt;code&gt;Import from Final Draft "Text With Layout"&lt;/code&gt;&lt;/li&gt;
+		&lt;/ol&gt;
+
+		&lt;/div&gt;&lt;!-- section --&gt;
+
+	&lt;div id="formatting" class="section"&gt;
+
+		&lt;h2&gt;Formatting&lt;/h2&gt;
+
+		&lt;h3 id="plaintext_format"&gt;Plaintext Format&lt;/h3&gt;
+
+		&lt;p&gt;All formatting is automatic, should you need to repair formatting, the format of the plaintext screenplay documents is as follows:&lt;/p&gt;
+
+		&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Slugline&lt;/strong&gt;: Any line that begins with "INT.", "EXT.", "I/E." OR any line that consists of all capitol letters.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: Any line that doesn't start with a tab and is not a Slugline or Left-Transition.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Characters&lt;/strong&gt;: Any line that begins with 4 tabs.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Parenthetical&lt;/strong&gt;: Any line that begins with 3 tabs and begins &amp;amp; ends with parenthesis.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Dialogue&lt;/strong&gt;: Any line that begins with 2 tabs.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Transitions&lt;/strong&gt;: Any line beginning with 10 tabs.&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;h3 id="custom_header_and_footer"&gt;Custom Header and Footer&lt;/h3&gt;
+
+		&lt;p&gt;Headers and Footers can be done globally (i.e. they apply to all scripts) or on a per-project basis.&lt;/p&gt;
+
+		&lt;h4 id="global_headers_and_footers"&gt;Global Headers and Footers&lt;/h4&gt;
+
+		&lt;ol&gt;
+			&lt;li&gt;Open &lt;code&gt;Preferences &amp;#x2192; Advanced &amp;#x2192; Shell Variables&lt;/code&gt;&lt;/li&gt;
+			&lt;li&gt;Click the plus sign to add a new Variable&lt;/li&gt;
+			&lt;li&gt;Under the &lt;code&gt;Variable&lt;/code&gt; field, type &lt;code&gt;SPLAY_HEADER&lt;/code&gt; or &lt;code&gt;SPLAY_FOOTER&lt;/code&gt;&lt;/li&gt;
+			&lt;li&gt;Under the &lt;code&gt;Value&lt;/code&gt; field, type the header or footer you want to appear&lt;/li&gt;
+		&lt;/ol&gt;
+
+		&lt;h4 id="per-project_headers_and_footers"&gt;Per-Project Headers and Footers&lt;/h4&gt;
+
+		&lt;ol&gt;
+			&lt;li&gt;Deselect everything in the project drawer and click the info button &lt;span class="grey"&gt;(circled "i" in the bottom-right of the drawer)&lt;/span&gt;&lt;/li&gt;
+			&lt;li&gt;Click the plus sign to add a new Variable&lt;/li&gt;
+			&lt;li&gt;Under the &lt;code&gt;Variable&lt;/code&gt; field, type &lt;code&gt;SPLAY_HEADER&lt;/code&gt; or &lt;code&gt;SPLAY_FOOTER&lt;/code&gt;&lt;/li&gt;
+			&lt;li&gt;Under the &lt;code&gt;Value&lt;/code&gt; field, type the header or footer you want to appear&lt;/li&gt;
+		&lt;/ol&gt;
+
+		&lt;h3 id="customizing_the_screenplay_layout"&gt;Customizing The Screenplay Layout&lt;/h3&gt;
+
+		&lt;p&gt;Before attempting to customize the layout of your screenplay please read the section on &lt;a href="#custom_header_and_footer"&gt;Headers and Footers&lt;/a&gt; as it will introduce you to the concept of Variables.&lt;/p&gt;
+
+		&lt;dl class="alert"&gt;
+			&lt;dt&gt;Indents&lt;/dt&gt;
+			&lt;dd&gt;All indentation values should be added to global values. For example, if you want to left-indent Characters by 3 inches, you'll have to subtract whatever the global-left margin is, the defult (listed below) is 1.5in; so you'd set a value of 1.5in.&lt;/dd&gt;
+			&lt;dt&gt;Values&lt;/dt&gt;
+			&lt;dd&gt;For simplicity's sake you should define values in either points or inches, abbreviated as &lt;code&gt;pt&lt;/code&gt; and &lt;code&gt;in&lt;/code&gt; respectively. Entering in a value of &lt;code&gt;3.5inches&lt;/code&gt; or &lt;code&gt;3.5 inches&lt;/code&gt; or simply &lt;code&gt;3.5&lt;/code&gt; will screw-up the layout. Mimic the default values exactly.&lt;/dd&gt;
+		&lt;/dl&gt;
+
+		&lt;table id="variables"  border="0" cellspacing="0" cellpadding="2"&gt;
+		&lt;tr class="th"&gt;&lt;td&gt;Property&lt;/td&gt;&lt;td&gt;Variable&lt;/td&gt;&lt;td class="unit"&gt;Default Value&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;th&gt;Global&lt;/th&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Top Page Margin&lt;/td&gt;&lt;td class="var"&gt;SPLAY_PAGE_TOP&lt;/td&gt;&lt;td class="unit"&gt;1in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Right Page Margin&lt;/td&gt;&lt;td class="var"&gt;SPLAY_PAGE_RIGHT&lt;/td&gt;&lt;td class="unit"&gt;1in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Bottom Page Margin&lt;/td&gt;&lt;td class="var"&gt;SPLAY_PAGE_BOTTOM&lt;/td&gt;&lt;td class="unit"&gt;.5in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Left Page Margin&lt;/td&gt;&lt;td class="var"&gt;SPLAY_PAGE_LEFT&lt;/td&gt;&lt;td class="unit"&gt;1.5in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Global Line-Height&lt;/td&gt;&lt;td class="var"&gt;SPLAY_LINEHEIGHT&lt;/td&gt;&lt;td class="unit"&gt;12.4pt&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;th&gt;Dialogue&lt;/th&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Character Indentation&lt;/td&gt;&lt;td class="var"&gt;SPLAY_CHAR_INDENT &lt;/td&gt;&lt;td class="unit"&gt;2in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Character Width &lt;/td&gt;&lt;td class="var"&gt;SPLAY_CHAR_WIDTH &lt;/td&gt;&lt;td class="unit"&gt;4in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Parenthetical Indentation &lt;/td&gt;&lt;td class="var"&gt;SPLAY_PAR_INDENT &lt;/td&gt;&lt;td class="unit"&gt;1.6in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Parenthetical Width &lt;/td&gt;&lt;td class="var"&gt;SPLAY_PAR_WIDTH &lt;/td&gt;&lt;td class="unit"&gt;2in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Dialogue Indentation &lt;/td&gt;&lt;td class="var"&gt;SPLAY_DIAL_INDENT &lt;/td&gt;&lt;td class="unit"&gt;1in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Dialogue Width &lt;/td&gt;&lt;td class="var"&gt;SPLAY_DIAL_WIDTH &lt;/td&gt;&lt;td class="unit"&gt;3.5in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;th&gt;Action&lt;/th&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Action Indent&lt;/td&gt;&lt;td class="var"&gt;SPLAY_ACT_INDENT &lt;/td&gt;&lt;td class="UNIT"&gt;0in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Action Width&lt;/td&gt;&lt;td class="var"&gt;SPLAY_ACT_WIDTH &lt;/td&gt;&lt;td class="UNIT"&gt;auto&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;th&gt;Sluglines&lt;/th&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Indent&lt;/td&gt;&lt;td class="var"&gt;SPLAY_SLUG_INDENT &lt;/td&gt;&lt;td class="UNIT"&gt;0in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Width &lt;/td&gt;&lt;td class="var"&gt;SPLAY_SLUG_WIDTH &lt;/td&gt;&lt;td class="unit"&gt;6in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Top Margin&lt;/td&gt;&lt;td class="var"&gt;SPLAY_SLUG_TOP_MARGIN &lt;/td&gt;&lt;td class="unit"&gt;24pt&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Bottom Margin&lt;/td&gt;&lt;td class="var"&gt;SPLAY_SLUG_BOTTOM_MARGIN &lt;/td&gt;&lt;td class="unit"&gt;12pt&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;th&gt;Transitions&lt;/th&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Transition Indent &lt;/td&gt;&lt;td class="var"&gt;SPLAY_TRANS_INDENT &lt;/td&gt;&lt;td class="unit"&gt;4in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Transition Width &lt;/td&gt;&lt;td class="var"&gt;SPLAY_TRANS_WIDTH &lt;/td&gt;&lt;td class="unit"&gt;2in&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Top Margin &lt;/td&gt;&lt;td class="var"&gt;SPLAY_TRANS_TOP_MARGIN &lt;/td&gt;&lt;td class="unit"&gt;12pt&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Bottom Margin &lt;/td&gt;&lt;td class="var"&gt;SPLAY_TRANS_BOTTOM_MARGIN &lt;/td&gt;&lt;td class="unit"&gt;12pt&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;th&gt;Special&lt;/th&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Dialogue Line-Height &lt;/td&gt;&lt;td class="var"&gt;SPLAY_DIAL_LINEHEIGHT&lt;/td&gt;&lt;td class="unit grey"&gt;(see below)&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Slugline Font Weight &lt;/td&gt;&lt;td class="var"&gt;SPLAY_SLUG_BOLD &lt;/td&gt;&lt;td class="unit grey"&gt;(see below)&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td class="def"&gt;Slugline Underline State&lt;/td&gt;&lt;td class="var"&gt;SPLAY_SLUG_ULINE &lt;/td&gt;&lt;td class="unit grey"&gt;(see below)&lt;/td&gt;&lt;/tr&gt;
+		&lt;/table&gt;
+
+		&lt;dl class="alert"&gt;
+			&lt;dt&gt;&lt;code&gt;SPLAY_DIAL_LINEHEIGHT&lt;/code&gt;&lt;/dt&gt;
+			&lt;dd&gt;If you wish the dialogue to have a different line-height than the rest of the document change it here. For double-spacing use &lt;code&gt;24pt&lt;/code&gt;.&lt;/dd&gt;
+			&lt;dt&gt;&lt;code&gt;SPLAY_SLUG_BOLD&lt;/code&gt;&lt;/dt&gt;
+			&lt;dd&gt;If you want bold sluglines, enter a value of &lt;code&gt;bold&lt;/code&gt;.&lt;/dd&gt;
+			&lt;dt&gt;&lt;code&gt;SPLAY_SLUG_ULINE&lt;/code&gt;&lt;/dt&gt;
+			&lt;dd&gt;If you want underlined sluglines, enter a value of &lt;code&gt;underline&lt;/code&gt;.&lt;/dd&gt;
+		&lt;/dl&gt;
+
+	&lt;/div&gt;
+
+		&lt;div id="final_draft_shortcuts" class="section"&gt;
+
+		&lt;h2&gt;Final Draft Shortcuts&lt;/h2&gt;
+
+		&lt;p&gt;Below is a list of all supported Shortcuts that are in both this bundle and in Final Draft 7. (aside from the &amp;#x21E5; and &amp;#x21A9; shortcuts, natually)&lt;/p&gt;
+
+		&lt;ul&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2318;U&lt;/code&gt; = Underline&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2318;K&lt;/code&gt; = Capitalize Word / Selection&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2318;=&lt;/code&gt; = Insert ScriptNote&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2318;;&lt;/code&gt; = Thesaurus&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2325;1&lt;/code&gt; = INT.&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2325;2&lt;/code&gt; = EXT.&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2325;3&lt;/code&gt; = I/E.&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2325;4&lt;/code&gt; = - DAY&lt;/li&gt;
+			&lt;li&gt;&lt;code&gt;&amp;#x2325;5&lt;/code&gt; = - NIGHT&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;/div&gt;&lt;!-- section --&gt;
+
+		&lt;div id="more_information" class="section"&gt;
+
+		&lt;h2&gt;More Information&lt;/h2&gt;
+
+		&lt;p&gt;This bundle is maintained by Oliver Taylor at &lt;a href="http://ollieman.net"&gt;http://ollieman.net&lt;/a&gt;.&lt;/p&gt;
+		&lt;/div&gt;&lt;!-- section --&gt;
+
+		&lt;/div&gt;&lt;!-- wrapper --&gt;		
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+HTML</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^D</string>
+	<key>name</key>
+	<string>Help</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>uuid</key>
+	<string>ACC77848-35DB-4CE8-899D-79E24189F5FF</string>
+</dict>
+</plist>

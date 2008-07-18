@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>(${1:VO})</string>
+	<key>keyEquivalent</key>
+	<string>(</string>
+	<key>name</key>
+	<string>Brackets</string>
+	<key>scope</key>
+	<string>text.screenplay character eol</string>
+	<key>uuid</key>
+	<string>16B564A5-ACC6-4416-8B87-5B2BACC6E167</string>
+</dict>
+</plist>

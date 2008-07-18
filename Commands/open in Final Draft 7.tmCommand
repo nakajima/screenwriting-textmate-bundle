@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># first figure out a name for the result
+NAME="${TM_FILENAME:-untitled}"
+BASENAME="${NAME%.*}"
+DST="/tmp/$BASENAME"
+
+# everything we output within { … } is written to the txt file via redirection (see line with the })
+{
+perl -pe '
+	s/\/\*.*\*\///g; # strip comments from document
+'
+} &gt;"$DST.txt"
+
+# open the generated txt file in Final Draft 
+open -a Final\ Draft\ 7 "$DST.txt"</string>
+	<key>fallbackInput</key>
+	<string>document</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^H</string>
+	<key>name</key>
+	<string>open in Final Draft 7</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>uuid</key>
+	<string>D613D9C6-B083-420C-AD04-F1EA3ABE40BB</string>
+</dict>
+</plist>

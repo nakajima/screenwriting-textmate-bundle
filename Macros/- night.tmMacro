@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<string> </string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>-</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string> </string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>n</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>i</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>g</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>h</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>t</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>command</key>
+						<string>moveToBeginningOfLineAndModifySelection:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>uppercaseWord:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>moveToEndOfLine:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewlineIgnoringFieldEditor:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewlineIgnoringFieldEditor:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>~5</string>
+	<key>name</key>
+	<string>- night</string>
+	<key>scope</key>
+	<string>text.screenplay keyword.slugline location eol</string>
+	<key>uuid</key>
+	<string>A6AA7559-8FE3-4A5E-AF94-BDB1706A06D7</string>
+</dict>
+</plist>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToBeginningOfLineAndModifySelection:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>content</key>
+				<string>										${1:${TM_SELECTED_TEXT:CUT TO}}:$0</string>
+				<key>keyEquivalent</key>
+				<string>~	</string>
+				<key>name</key>
+				<string>CUT TO:</string>
+				<key>scope</key>
+				<string>text.screenplay</string>
+				<key>tabTrigger</key>
+				<string>cut</string>
+				<key>uuid</key>
+				<string>FA310B99-0CD7-4264-8191-AB26EA0F8985</string>
+			</dict>
+			<key>command</key>
+			<string>insertSnippetWithOptions:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveRight:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>command</key>
+						<string>moveToBeginningOfLineAndModifySelection:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>uppercaseWord:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>moveToEndOfLine:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewlineIgnoringFieldEditor:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewlineIgnoringFieldEditor:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>:</string>
+	<key>name</key>
+	<string>automatic transition creation</string>
+	<key>scope</key>
+	<string>text.screenplay constant.primer.transition.colon</string>
+	<key>uuid</key>
+	<string>D84ECFF7-8780-41D0-A3D0-DFB972A1543B</string>
+</dict>
+</plist>

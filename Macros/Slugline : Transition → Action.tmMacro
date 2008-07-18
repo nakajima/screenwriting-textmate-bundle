@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToBeginningOfLineAndModifySelection:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>uppercaseWord:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveToEndOfLine:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>insertNewlineIgnoringFieldEditor:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>insertNewlineIgnoringFieldEditor:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Slugline / Transition → Action</string>
+	<key>scope</key>
+	<string>text.screenplay keyword.slugline eol, text.screenplay constant.transition eol, text.screenplay constant.primer.transition</string>
+	<key>uuid</key>
+	<string>175781D2-E1DC-487F-AB2F-714D925A1886</string>
+</dict>
+</plist>

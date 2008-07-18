@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+
+Markdown.pl &lt;&lt;"EOF"|SmartyPants.pl
+
+More info... &lt;http://ollieman.net/screenbundle/&gt;
+
+# Screenwriting bundle Change Log
+
+## Version 312
+
+[ADDED] Now you can type up to 5 words at the beginning of a line (with no uppercaser letters) then a space and a dash and the line will be recognized as a slugline.
+
+[FIXED] Minor cosmetic issues in the menu.
+
+[FIXED] Compatibility update for PrinceXML 6rev4
+
+[ADDED] Support for bold and underline. Now anything encased in asterisks is bolded, and anything encased in underscores is underlined. No italics due to a limiation in Prince (sorry kids).
+
+[FIX] Fixed an error in the "character" grammer that didn't recognize a single letter as the beginning of a character name, thus preventing auto-complete.
+
+## Version 311
+
+[FIXED] Added compatibility for PrinceXML 6.0.
+
+## Version 310
+
+[CHANGED] Tab triggers can now be a single letter (still only one word).
+
+[ADDED] Now when pressing delete in an empty character or transition, you are taken to the beginning of the line. Duh.
+
+[CHANGED] Right-Transition elements are no longer required to end in a colon or period.
+
+[ADDED] (again) Support for some kinds of Left-Transitions.
+
+[ADDED] Export to PDF now supports optional scene numbers.
+
+[FIXED] Some arbitrary sulglines not being recognized
+
+[CHANGED] Auto-complete now uses the escape key
+
+[CHANGED] sluglines now fully-support the use of periods to seperate location from time (INT. PLACE. TIME) (not just INT. PLACE - TIME)
+
+[ADDED] comments to the language grammer
+
+[ADDED] Illigal highlighting to malformed parenteticals.
+
+[FIXED] Corrected problem leading to line-breaks not registering correctly.
+
+[ADDED] Tab shortcut for jumping from an empty character element to a transition (press tab twice at the beginning of a line to create a transition).
+
+[ADDED] Variables for Action Paragraph indent and width.
+
+[ADDED] Variable for Slugline Indent.
+
+## Version 301
+
+[CHANGED] Character auto-complete no longer returns parentheticals (eg. (VO), (O.S.), etc), now it returns just names. This prevents both "Tony" and "Tony (VO)" from being returned in the auto-complete list.
+
+[CHANGED] Refined bundle scope selectors to avoid conflicts with with other bundles. Should fix broken completion errors in other languages.
+
+[CHANGED] Altered default footer margins for PDF.
+
+## Version 3
+
+[NEW] Fully-functional Auto-complete for Character Names, Locations, and Times
+
+[NEW] Documents are given a default extension of "screenplay". "splay" and "scrnply" are also supported
+
+[NEW] No more shift-tab! Just use tab.
+
+[NEW] Added auto-complete for locaitons, times of day, and character names. Press "esc" to complete. Names are the 600 most common american names in the 2005 US census. Locations are some common ones I use.
+
+[NEW] Added support for Centered Text. The tab-trigger for this is "center". Or any line starting with 5 tabs.
+
+[NEW] Added support for line-breaks within paragraphs (Finally!).
+
+[NEW] Document is styled/colored by default.
+
+[NEW] Added Preview function for the entire document or selected text.
+
+[NEW] Added illigal formating syntax to assist with formatting.
+
+[NEW] Added support for page-breaks and a page-break snippet (break).
+
+[NEW] Now *all* characters are "smart", looking behind two lines.
+
+[NEW] Many Final Draft keyboard-shortcuts are now supported; apple K, option 1, option 2, apple ;, etc.
+
+[CHANGED] Tab key is disabled within some elements.
+
+[CHANGED] Dramatically simplified &amp; improved language-grammer which translates into speed increase.
+
+[CHANGED] Completely re-written exporting engine for more reliable and flexable formatting.
+
+[CHANGED] Keyboard shortcut for page-count guessing is now "shift ctrl N".
+
+[FIXED] Updated smart character-element behaviour for TextMate builds 1161+.
+
+[FIXED] Issue where non-printing-comments could not start with a newline.
+
+[FIXED] Comments are now properly stripped when exporting to Final Draft.
+
+[REMOVED] Transforming commands via ctrl 1, ctrl 2, etc.
+
+[REMOVED] Removed support for printing comments.
+
+[REMOVED] Scene Analysis snippet.
+
+[REMOVED] Support for typographical punctuation.
+
+EOF
+
+html_footer</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>CHANGE LOG</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.screenplay</string>
+	<key>uuid</key>
+	<string>3F73EDFE-F568-4C49-A19F-74DB88055E0F</string>
+</dict>
+</plist>

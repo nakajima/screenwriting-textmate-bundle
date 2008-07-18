@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>command</key>
+						<string>insertNewlineIgnoringFieldEditor:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewline:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>#!/usr/bin/perl -w
+$m1=$m2='';
+$c=1;
+while(&lt;&gt;)
+{
+	if(/^\t{4}(\S.*)[\r\n]*$/)
+	{
+		$m1=$m2;
+		$m2=$1;
+	}
+	$c++;
+	last if($c==$ENV{'TM_LINE_NUMBER'});
+}
+print "\t\t\t\t$m1";</string>
+				<key>disableOutputAutoIndent</key>
+				<true/>
+				<key>input</key>
+				<string>document</string>
+				<key>name</key>
+				<string>character (smart)</string>
+				<key>output</key>
+				<string>afterSelectedText</string>
+				<key>uuid</key>
+				<string>E2A7C9E1-7275-4DDD-997C-DDCC86AD9A17</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveToBeginningOfParagraph:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveRight:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveRight:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveRight:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveRight:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveToEndOfLineAndModifySelection:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>	</string>
+	<key>name</key>
+	<string>action / dialogue → character</string>
+	<key>scope</key>
+	<string>text.screenplay string.dialogue eol, text.screenplay meta.action eol</string>
+	<key>uuid</key>
+	<string>7EA94022-2E07-45C3-B61E-27950D3EA404</string>
+</dict>
+</plist>

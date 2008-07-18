@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>insertTab:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>	</string>
+	<key>name</key>
+	<string>Tab Trigger</string>
+	<key>scope</key>
+	<string>text.screenplay meta.tab-trigger eol, text.screenplay string.character eol, text.screenplay comment, text.screenplay meta.primer</string>
+	<key>uuid</key>
+	<string>80493EA4-3C1B-4836-8E48-5BF3DE1E736B</string>
+</dict>
+</plist>
